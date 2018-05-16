@@ -26,11 +26,11 @@ request(roomsUrl, (error, response) => {
                 buildingNumber: building['0'],
                 buildingName: building['1'],
                 buildingAddress: building['2'],
+                buildingUrl: arrayOfBuildingsUrls[index]
             })
         });
 
         console.log(arrayOfBuildings)
-        console.log(arrayOfBuildingsUrls)
     }
     else {
         console.log(error)
