@@ -45,7 +45,13 @@ const mainScraper = () => {
         (arrayOfBuildings, cb) => { // pierwszy argument to argument przekazany z poprzedniego callbacka
             console.log('Callback numer 2 rozpoczęty')
             arrayOfBuildings.forEach(building => {
-                console.log(building.buildingUrl)
+                request(building.buildingUrl, (error, response) => {
+                    if (!error) {
+                        console.log(response.statusCode, 'tutaj się dzieje dokładnie to samo co w linijce 15, tylko, że dla każdego url budynku') // response.body ma całego html'a
+                    } else {
+                        console.log(error)
+                    }
+                })
             })
         }
     ])
