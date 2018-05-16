@@ -9,10 +9,20 @@ const prefixUrl = 'http://www.plan.uz.zgora.pl/'
 
 request(roomsUrl, (error, response) => {
     if (!error) {
+        let arrayOfBuildings = []
+
         let tables = tableToJson.convert(response.body)
         let allBuildings = tables[0]
         allBuildings.splice(0, 1)
-        console.log(allBuildings)
+        allBuildings.forEach(building => {
+            arrayOfBuildings.push({
+                buildingNumber: building['0'],
+                buildingName: building['1'],
+                buildingAddress: building['2'],
+            })
+        });
+
+        console.log(arrayOfBuildings)
 
         const $ = cheerio.load(response.body);
         $('tr td a').each((index, el) => {
