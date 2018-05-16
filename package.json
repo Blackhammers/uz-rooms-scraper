@@ -1,0 +1,24 @@
+{
+  "name": "uz-rooms-scraper",
+  "version": "1.0.0",
+  "description": "Scraping UZ rooms' plan",
+  "main": "mainScraper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blackhammers/uz-rooms-scraper.git"
+  },
+  "keywords": [
+    "scraper",
+    "uz",
+    "plan"
+  ],
+  "author": "Blackhammers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Blackhammers/uz-rooms-scraper/issues"
+  },
+  "homepage": "https://github.com/Blackhammers/uz-rooms-scraper#readme"
+}
