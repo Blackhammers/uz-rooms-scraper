@@ -4,6 +4,7 @@ const tableToJson = require('tabletojson')
 
 
 const roomsUrl = 'http://www.plan.uz.zgora.pl/sale_lista_budynkow.php?pTyp=P'
+const prefixUrl = 'http://www.plan.uz.zgora.pl/'
 
 
 request(roomsUrl, (error, response) => {
@@ -13,7 +14,7 @@ request(roomsUrl, (error, response) => {
 
         const $ = cheerio.load(response.body);
         $('tr td a').each((index, el) => {
-            console.log(el.attribs.href)
+            console.log(prefixUrl + el.attribs.href)
         })
     }
     else {
