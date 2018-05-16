@@ -21,7 +21,7 @@ request(roomsUrl, (error, response) => {
             arrayOfBuildingsUrls.push(prefixUrl + el.attribs.href)
         })
 
-        allBuildings.forEach((buildin, index) => {
+        allBuildings.forEach((building, index) => {
             arrayOfBuildings.push({
                 buildingNumber: building['0'],
                 buildingName: building['1'],
