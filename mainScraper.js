@@ -9,8 +9,10 @@ const prefixUrl = 'http://www.plan.uz.zgora.pl/'
 
 request(roomsUrl, (error, response) => {
     if (!error) {
-        // let tables = tableToJson.convert(response.body)
-        // console.log(tables[0])
+        let tables = tableToJson.convert(response.body)
+        let allBuildings = tables[0]
+        allBuildings.splice(0, 1)
+        console.log(allBuildings)
 
         const $ = cheerio.load(response.body);
         $('tr td a').each((index, el) => {
