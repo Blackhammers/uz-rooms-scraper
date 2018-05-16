@@ -58,3 +58,7 @@ const mainScraper = () => {
 }
 
 mainScraper()
+
+// TO DO
+// 1. Trzeba dodać do arrayOfBuildings nowy klucz zawierający tablicę z obiektami pokojów
+// 2. Trzeba zrobić dla każdego pokoju tablicę dni tygodnia z planem na poszczególny dzień
