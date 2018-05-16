@@ -35,16 +35,16 @@ const mainScraper = () => {
                         })
                     });
                     console.log('Tworzenie tablicy z obiektami budynków ukońzczone')
-                    cb(null, arrayOfBuildings);
+                    cb(null, arrayOfBuildings) // przekazanie drugiego argumentu do następnego callbacka
                 }
                 else {
                     console.log(error)
                 }
             })
         },
-        (arrayOfBuildings, cb) => {
+        (arrayOfBuildings, cb) => { // pierwszy argument to argument przekazany z poprzedniego callbacka
             console.log('Callback numer 2 rozpoczęty')
-
+            console.log(arrayOfBuildings)
         }
     ])
 }
