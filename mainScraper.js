@@ -13,7 +13,7 @@ request(roomsUrl, (error, response) => {
 
         const $ = cheerio.load(response.body);
         $('tr td a').each((index, el) => {
-            console.log(el)
+            console.log(el.attribs.href)
         })
     }
     else {
