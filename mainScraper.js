@@ -26,7 +26,7 @@ const mainScraper = () => {
                         arrayOfBuildingsUrls.push(prefixUrl + el.attribs.href)
                     })
 
-                    allBuildings.forEach((building, index) => {
+                    allBuildings.forEach((building, index) => {  // jeżeli chce się zmienić oryginalny element tablicy używamy .map() zamiast .forEach()
                         arrayOfBuildings.push({
                             buildingNumber: building['0'],
                             buildingName: building['1'],
@@ -44,7 +44,9 @@ const mainScraper = () => {
         },
         (arrayOfBuildings, cb) => { // pierwszy argument to argument przekazany z poprzedniego callbacka
             console.log('Callback numer 2 rozpoczęty')
-            console.log(arrayOfBuildings)
+            arrayOfBuildings.forEach(building => {
+                console.log(building.buildingUrl)
+            })
         }
     ])
 }
